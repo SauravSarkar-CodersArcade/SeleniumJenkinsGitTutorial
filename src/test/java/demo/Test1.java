@@ -14,8 +14,6 @@ public class Test1 {
     private WebDriver driver;
     @BeforeClass(alwaysRun = true)
     public void setUp() {
-        String projectPath = System.getProperty("user.dir");
-        System.setProperty("webdriver.chrome.driver", projectPath + "/driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
